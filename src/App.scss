@@ -1,12 +1,18 @@
-.App {
-  text-align: center;
-}
-
 .Section {
   width: 100%;
-  min-height: 90vh;
 
   &-Primary {
     background-color: #808E95;
+    color: #FFFFFF;
+  }
+
+  &-Secondary {
+    background-color: #FFFFFF;
+    color: #808E95;
+  }
+
+  &-header {
+    font-size: 72px;
+    line-height: 130px;
   }
 }

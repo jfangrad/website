@@ -1,5 +1,34 @@
 .NavBar {
-  width: 100%;
+  padding: 10px;
   min-height: 20px;
-  background-color: oldlace;
+  background-color: #FFFFFF;
+  display: flex;
+}
+
+.NavBar-link-container {
+  display: flex;
+}
+
+.NavBar-link,
+.NavBar-link--selected {
+  padding: 4px 8px;
+  color: #63757D;
+
+  button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    padding: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.NavBar-link--selected {
+  color: #405763;
+  font-weight: bold;
 }
