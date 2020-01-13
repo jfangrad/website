@@ -1,0 +1,7 @@
+@import '../variables.scss';
+
+.Projects-container {
+  margin: $section-margins;
+  display: flex;
+  flex-direction: column;
+}

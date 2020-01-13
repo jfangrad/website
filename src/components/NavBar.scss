@@ -1,8 +1,18 @@
+@import '../variables.scss';
+
 .NavBar {
-  padding: 10px;
-  min-height: 20px;
-  background-color: #FFFFFF;
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  background-color: $white;
   display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+
+  &-placeholder {
+    height: 48px;
+  }
 }
 
 .NavBar-link-container {
@@ -11,16 +21,21 @@
 
 .NavBar-link,
 .NavBar-link--selected {
-  padding: 4px 8px;
   color: #63757D;
 
   button {
+    padding: 4px 8px;
     background: none;
     border: none;
     color: inherit;
     font-weight: inherit;
     font-size: inherit;
     padding: none;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      color: darken($color: #63757D, $amount: 20%);
+    }
 
     &:focus {
       outline: none;
@@ -29,6 +44,41 @@
 }
 
 .NavBar-link--selected {
-  color: #405763;
+  color: $grey-dark;
   font-weight: bold;
+
+  &:hover, &:focus {
+    color: darken($color: $grey-dark, $amount: 20%);
+  }
+}
+
+.NavBar-social-links {
+  display: flex;
+  align-items: center;
+
+  .NavBar-resume {
+    color: $text-grey;
+    text-decoration: none;
+    padding: 4px 12px;
+    margin: 0 10px;
+    border: 1px solid $text-grey;
+    border-radius: 4px;
+
+    &:hover {
+      color: darken($color: $text-grey, $amount: 20%);
+      border-color: darken($color: $text-grey, $amount: 20%);
+    }
+  }
+
+  .NavBar-social-link {
+    color: $text-grey;
+    text-decoration: none;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: darken($color: $text-grey, $amount: 20%);
+    }
+  }
 }
