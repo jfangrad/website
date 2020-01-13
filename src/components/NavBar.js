@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ResumeDownloadLink, NavItems, SocialLinks } from '../constants/NavBar';
 import './NavBar.scss';
 
 const NavLink = ({navItem, selected, onClick}) =>  {
@@ -15,13 +16,6 @@ const NavLink = ({navItem, selected, onClick}) =>  {
   );
 };
 
-const NavItems = [
-  { text: 'About', value: 'about' },
-  { text: 'Skills', value: 'skills' },
-  { text: 'Experience', value: 'experience' },
-  { text: 'Projects', value: 'projects' },
-];
-
 const NavBar = () => {
   const [selected, setSelected] = useState(NavItems[0].value);
 
@@ -32,15 +26,31 @@ const NavBar = () => {
   };
 
   const links = NavItems.map(navItem =>
-    <NavLink navItem={navItem} selected={selected === navItem.value} onClick={onClick} />,
+    <NavLink key={navItem.value} navItem={navItem} selected={selected === navItem.value} onClick={onClick} />,
   );
 
+  const socialLinks = SocialLinks.map(socialLink => (
+    <a key={socialLink.link} className="NavBar-social-link" href={socialLink.link} target="_blank" rel="noopener noreferrer">
+      {socialLink.icon}
+    </a>
+  ));
+
   return (
-    <div className="NavBar">
-      <div className="NavBar-link-container">
-        {links}
+    <>
+      <div className="NavBar">
+        <div className="NavBar-link-container">
+          {links}
+        </div>
+        <div className="NavBar-social-links">
+          <a className="NavBar-resume" href={ResumeDownloadLink} target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
+          {socialLinks}
+        </div>
       </div>
-    </div>
+      {/* Give this the id 'about' so that scrollIntoView scrolls all the way to the top of page */}
+      <div className="NavBar-placeholder" id="about" />
+    </>
   );
 }
 
