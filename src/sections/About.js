@@ -12,8 +12,8 @@ const About = () => (
         Software Developer
       </div>
       <div className="About-info-description">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        <p>Hello! My name is Justin Fangrad and I am a 4th year computer engineering student at the University of Waterloo and I have had the great experience of working for some great companies and have learned a lot along the way.</p>
+        <p>I have a wide range of knowledge from web development to low level integrated development. I love to learn knew things and am always looking for ways to expand my experience.</p>
       </div>
     </div>
     <div className="About-image">

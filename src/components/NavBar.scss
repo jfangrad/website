@@ -17,6 +17,7 @@
 
 .NavBar-link-container {
   display: flex;
+  margin: 0 10px;
 }
 
 .NavBar-link,
@@ -55,6 +56,7 @@
 .NavBar-social-links {
   display: flex;
   align-items: center;
+  margin: 0 10px;
 
   .NavBar-resume {
     color: $text-grey;
