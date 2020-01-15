@@ -2,6 +2,8 @@ import React from 'react';
 import image from '../assets/justin-image-cropped.png'
 import './About.scss';
 
+
+// TODO: particles.js
 const About = () => (
   <div className="Section Section-Primary About">
     <div className="About-info">
