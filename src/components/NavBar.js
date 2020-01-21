@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ResumeDownloadLink, NavItems, SocialLinks } from '../constants/NavBar';
+import Logo from '../assets/justin-logo.png';
 import './NavBar.scss';
 
 const NavLink = ({navItem, selected, onClick}) =>  {
@@ -25,6 +26,8 @@ const NavBar = () => {
     section.scrollIntoView({ behavior: 'smooth', block: 'start'})
   };
 
+  const onLogoClick = () => onClick(NavItems[0].value);
+
   const links = NavItems.map(navItem =>
     <NavLink key={navItem.value} navItem={navItem} selected={selected === navItem.value} onClick={onClick} />,
   );
@@ -39,6 +42,9 @@ const NavBar = () => {
     <>
       <div className="NavBar">
         <div className="NavBar-link-container">
+          <button className="NavBar-icon" onClick={onLogoClick}>
+            <img src={Logo} alt="Justin Fangrad Logo" />
+          </button>
           {links}
         </div>
         <div className="NavBar-social-links">

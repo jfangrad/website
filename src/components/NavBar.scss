@@ -18,6 +18,26 @@
 .NavBar-link-container {
   display: flex;
   margin: 0 10px;
+  align-items: center;
+}
+
+.NavBar-icon {
+  padding: 4px 8px;
+  background: none;
+  border: none;
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  padding: none;
+  cursor: pointer;
+
+  img {
+    width: 68px;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .NavBar-link,
