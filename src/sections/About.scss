@@ -2,11 +2,13 @@
   background-color: #808E95;
   display: flex;
   align-items: center;
+  max-height: 95vh;
 }
 
 .About-info {
   display: flex;
   flex-direction: column;
+  flex: 1;
   align-items: flex-start;
   margin-left: 10vh;
   color: #FFFFFF;
@@ -27,7 +29,11 @@
 }
 
 .About-image {
-  margin-bottom: -3px;
+  max-height: 95vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
   img {
     width: 40vw;
   }

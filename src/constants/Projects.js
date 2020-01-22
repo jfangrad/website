@@ -1,4 +1,4 @@
-import ShareBibles from '../assets/ShareBibles';
+import ShareBibles from '../assets/ShareBibles.png';
 import BringMeBack from '../assets/bringmeback.png';
 import Dropdown from '../assets/dropdown.svg';
 import Blinds from '../assets/blinds.jpg';

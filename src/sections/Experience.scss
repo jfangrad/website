@@ -49,6 +49,7 @@
   font-size: 35px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   .ExperienceItem-company-name {
     color: inherit;
@@ -65,14 +66,14 @@
   }
 
   .ExperienceItem-date {
-    font-size: 20px;
-    font-style: italic;
+    font-size: 16px;
   }
 }
 
 .ExperienceItem-job-title {
-  font-size: 26px;
-  line-height: 47px;
+  font-size: 22px;
+  margin-top: 12px;
+  margin-bottom: 4px;
 }
 
 .ExperienceItem-description {

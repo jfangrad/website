@@ -1,14 +1,28 @@
 import React from 'react';
 import './Projects.scss';
+import { ProjectItems } from '../constants/Projects';
 
-const ProjectItem = () => (
-  <div className="ProjectItem">
+const ProjectItem = ({ img, title, link, tools, description }) => {
+  const descriptionMarkup = description.map(d => (
+    <div className="ProjectItem-description-item">{d}</div>
+  ));
 
-  </div>
-);
+  return (
+    <a className="ProjectItem" href={link} target="_blank" rel="noopener noreferrer">
+      <div className="ProjectItem-image"><img src={img} alt={title} /></div>
+      <div className="ProjectItem-details">
+        <div className="ProjectItem-title">{title}</div>
+        <div className="ProjectItem-tools">{tools}</div>
+        <div className="ProjectItem-description">{descriptionMarkup}</div>
+      </div>
+    </a>
+  );
+}
 
 const Projects = () => {
-  // const projectItems =
+  const projectItems = ProjectItems.map(p => (
+    <ProjectItem {...p} />
+  ));
 
   return (
     <div className="Section Section-Secondary Projects" id="projects">
@@ -17,7 +31,7 @@ const Projects = () => {
             Projects
           </div>
           <div className="Projects-items-container">
-
+            {projectItems}
           </div>
       </div>
     </div>

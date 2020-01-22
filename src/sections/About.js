@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/justin-image-cropped.png'
+import image from '../assets/justin-image.png'
 import './About.scss';
 
 
