@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import ExternalLink from '../assets/ExternalLink';
 import { GroupedExperiences } from '../constants/Experience';
 import './Experience.scss';
+import ScrollMarker from '../components/ScrollMarker';
 
 const ExperienceItem = ({ companyName, companyLink, title, date, description, onRight, shouldRenderDivider }) => {
   const mappedDescriptions = description.map(d => <div className="ExperienceItem-description-item" key={d}>{d}</div>);
@@ -43,7 +44,8 @@ const Experience = () => {
   };
 
   return (
-    <div className="Section Section-Primary Experience" id="experience">
+    <div className="Section Section-Primary Experience">
+      <ScrollMarker sectionId="experience" />
       <div className="Experience-background" />
       <div className="Experience-container">
         <div className="Section-header">

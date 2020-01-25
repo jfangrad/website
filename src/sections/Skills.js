@@ -2,6 +2,7 @@ import React from 'react';
 import frontend from '../assets/frontend.svg';
 import programming from '../assets/programming.svg';
 import './Skills.scss';
+import ScrollMarker from '../components/ScrollMarker';
 
 const SkillsItem = ({ icon, altText, title, description }) => (
   <div className="SkillsItem">
@@ -35,7 +36,8 @@ const SkillItems = [
 ]
 
 const Skills = () => (
-  <div className="Section Section-Secondary Skills" id="skills">
+  <div className="Section Section-Secondary Skills">
+    <ScrollMarker sectionId="skills" />
     <div className="Skills-container">
       <div className="Section-header">
         Skills

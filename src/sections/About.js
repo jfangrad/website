@@ -1,11 +1,13 @@
 import React from 'react';
 import image from '../assets/justin-image.png'
 import './About.scss';
+import ScrollMarker from '../components/ScrollMarker';
 
 
 // TODO: particles.js
 const About = () => (
   <div className="Section Section-Primary About">
+    <ScrollMarker sectionId="about" />
     <div className="About-info">
       <div className="About-info-name Section-header">
         Justin Fangrad

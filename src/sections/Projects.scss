@@ -1,5 +1,10 @@
 @import '../variables.scss';
 
+.Projects {
+  display: flex;
+  flex-direction: column;
+}
+
 .Projects-container {
   margin: $section-margins;
   display: flex;
@@ -13,7 +18,7 @@
 .ProjectItem {
   display: flex;
   margin: 10px 0;
-  padding: 10px;
+  padding: 10px 20px;
   color: inherit;
   text-decoration: none;
 
@@ -46,10 +51,11 @@
 
   .ProjectItem-tools {
     font-size: 14px;
-    margin: 4px 0 8px 0;
+    margin: 4px 0 16px 0;
   }
 
   .ProjectItem-description-item {
-    margin-top: 5px;
+    margin-top: 6px;
+    line-height: 22px;
   }
 }

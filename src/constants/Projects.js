@@ -16,6 +16,7 @@ export const ProjectItems = [
   },
   {
     img: ShareBibles,
+    imgStyle: { maxWidth: '10vh', margin: '0 1vh' },
     title: 'Share Bibles',
     link: 'https://www.sharebibles.com/',
     tools: 'React Native (Android & IOS)',
@@ -36,6 +37,7 @@ export const ProjectItems = [
   },
   {
     img: Blinds,
+    imgStyle: { borderRadius: '50%' },
     title: 'Blind Opening Alarm Clock',
     link: 'https://www.instructables.com/id/Blind-Opening-Alarm-Clock/',
     tools: 'C++ | Spark Core microcontroller',

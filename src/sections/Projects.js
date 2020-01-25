@@ -1,15 +1,16 @@
 import React from 'react';
 import './Projects.scss';
 import { ProjectItems } from '../constants/Projects';
+import ScrollMarker from '../components/ScrollMarker';
 
-const ProjectItem = ({ img, title, link, tools, description }) => {
+const ProjectItem = ({ img, title, link, tools, description, imgStyle }) => {
   const descriptionMarkup = description.map(d => (
     <div className="ProjectItem-description-item">{d}</div>
   ));
 
   return (
     <a className="ProjectItem" href={link} target="_blank" rel="noopener noreferrer">
-      <div className="ProjectItem-image"><img src={img} alt={title} /></div>
+      <div className="ProjectItem-image"><img src={img} style={imgStyle} alt={title} /></div>
       <div className="ProjectItem-details">
         <div className="ProjectItem-title">{title}</div>
         <div className="ProjectItem-tools">{tools}</div>
@@ -25,7 +26,8 @@ const Projects = () => {
   ));
 
   return (
-    <div className="Section Section-Secondary Projects" id="projects">
+    <div className="Section Section-Secondary Projects">
+      <ScrollMarker sectionId="projects" />
       <div className="Projects-container">
           <div className="Section-header">
             Projects

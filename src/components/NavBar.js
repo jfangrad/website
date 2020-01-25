@@ -54,8 +54,8 @@ const NavBar = () => {
           {socialLinks}
         </div>
       </div>
-      {/* Give this the id 'about' so that scrollIntoView scrolls all the way to the top of page */}
-      <div className="NavBar-placeholder" id="about" />
+      {/* Placeholder for navbar at the top of the page (pushes everything else down by height of navbar) */}
+      <div className="NavBar-placeholder" />
     </>
   );
 }
