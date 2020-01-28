@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import classNames from 'classnames';
 import { ResumeDownloadLink, NavItems, SocialLinks } from '../constants/NavBar';
 import Logo from '../assets/justin-logo.png';
+import Menu from '../assets/Menu';
 import './NavBar.scss';
 
 const NavLink = ({navItem, selected, onClick}) =>  {
@@ -19,11 +21,17 @@ const NavLink = ({navItem, selected, onClick}) =>  {
 
 const NavBar = () => {
   const [selected, setSelected] = useState(NavItems[0].value);
+  const [navBarOpen, setNavBarOpen] = useState(false);
 
   const onClick = (value) => {
     const section = document.getElementById(value);
     setSelected(value);
+    setNavBarOpen(false);
     section.scrollIntoView({ behavior: 'smooth', block: 'start'})
+  };
+
+  const onControlClick = () => {
+    setNavBarOpen(p => !p);
   };
 
   const onLogoClick = () => onClick(NavItems[0].value);
@@ -38,13 +46,15 @@ const NavBar = () => {
     </a>
   ));
 
+  const className = classNames('NavBar-link-container', { collapsed: !navBarOpen });
+
   return (
     <>
       <div className="NavBar">
-        <div className="NavBar-link-container">
-          <button className="NavBar-icon" onClick={onLogoClick}>
-            <img src={Logo} alt="Justin Fangrad Logo" />
-          </button>
+        <button className="NavBar-icon" onClick={onLogoClick}>
+          <img src={Logo} alt="Justin Fangrad Logo" />
+        </button>
+        <div className={className}>
           {links}
         </div>
         <div className="NavBar-social-links">
@@ -52,6 +62,9 @@ const NavBar = () => {
             Resume
           </a>
           {socialLinks}
+          <button className="NavBar-control" onClick={onControlClick}>
+            <Menu />
+          </button>
         </div>
       </div>
       {/* Placeholder for navbar at the top of the page (pushes everything else down by height of navbar) */}

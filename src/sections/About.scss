@@ -9,7 +9,7 @@
   flex: 1;
   align-items: flex-start;
   align-self: center;
-  margin-left: 10vh;
+  margin-left: 10vw;
   color: #FFFFFF;
 
   &-name {
@@ -17,13 +17,13 @@
   }
 
   &-occupation {
-    font-size: 34px;
-    line-height: 64px;
+    font-size: 2em;
+    line-height: 2em;
   }
 
   &-description {
-    font-size: 23px;
-    line-height: 40px;
+    font-size: 1.5em;
+    line-height: 1.6em;
   }
 }
 
@@ -36,5 +36,19 @@
 
   img {
     width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .About-image {
+    display: none;
+  }
+
+  .About-info {
+    margin: 0 8vw;
+  }
+
+  .About-info-name {
+    padding-top: 4vh;
   }
 }

@@ -3,16 +3,16 @@
 .Skills {
   background-color: $white;
   display: flex;
-  font-size: 24px;
 }
 
 .Skills-container {
-  margin: 7vh;
+  margin: 7vw;
 }
 
 .Skills-description {
   margin-bottom: 10vh;
-  line-height: 35px;
+  line-height: 2em;
+  font-size: 1.5em;
 }
 
 .Skills-items-container {
@@ -27,9 +27,9 @@
   padding: 0 10px;
 
   &-icon {
-    width: 175px;
-    height: 175px;
-    margin-bottom: 20px;
+    width: 10.9em;
+    height: 10.9em;
+    margin-bottom: 1.25em;
     background-color: $grey;
     border-radius: 50%;
     display: flex;
@@ -38,19 +38,36 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     img {
-      width: 90px;
-      height: 90px;
+      width: 5.6em;
+      height: 5.6em;
     }
   }
 
   &-title {
-    font-size: 32px;
-    line-height: 63px;
+    font-size: 2em;
+    line-height: 2em;
   }
 
   &-description {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 1.25em;
+    line-height: 1.5em;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Skills-items-container {
+    flex-direction: column;
+  }
+
+  .Skills-description {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 5vh;
+  }
+
+  .SkillsItem {
+    padding: 2.5vh;
+    font-size: 12px;
   }
 }

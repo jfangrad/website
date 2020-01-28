@@ -46,16 +46,37 @@
   flex-direction: column;
 
   .ProjectItem-title {
-    font-size: 35px;
+    font-size: 2em;
   }
 
   .ProjectItem-tools {
-    font-size: 14px;
+    font-size: 0.8em;
     margin: 4px 0 16px 0;
   }
 
   .ProjectItem-description-item {
     margin-top: 6px;
     line-height: 22px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Projects-container {
+    margin: $section-margins;
+  }
+
+  .Projects-items-container {
+    margin: 2vh 0;
+  }
+
+  .ProjectItem-details {
+    font-size: 12px;
+  }
+
+  .ProjectItem-image {
+    img {
+      max-width: 12vw !important;
+      margin: 0 !important;
+    }
   }
 }

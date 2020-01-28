@@ -97,3 +97,33 @@
     border:1px solid $grey-dark;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .Experience {
+    .Experience-background {
+      display: none;
+    }
+  }
+
+  .Experience-row {
+    flex-direction: column;
+  }
+
+  .ExperienceItem {
+    margin: 0;
+
+    &-on-right {
+      margin: 0;
+      color: inherit;
+    }
+  }
+
+  .ExperienceItem-divider {
+    margin: 3vh 10vw;
+    border:1px solid $grey-light;
+
+    &-right {
+      border:1px solid $grey-light;
+    }
+  }
+}
