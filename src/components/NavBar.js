@@ -46,17 +46,18 @@ const NavBar = () => {
     </a>
   ));
 
-  const className = classNames('NavBar-link-container', { collapsed: !navBarOpen });
+  const className = classNames('NavBar-link-container-collapsible', { collapsed: !navBarOpen });
 
   return (
     <>
       <div className="NavBar">
-        <button className="NavBar-icon" onClick={onLogoClick}>
-          <img src={Logo} alt="Justin Fangrad Logo" />
-        </button>
-        <div className={className}>
+        <div className="NavBar-link-container">
+          <button className="NavBar-icon" onClick={onLogoClick}>
+            <img src={Logo} alt="Justin Fangrad Logo" />
+          </button>
           {links}
         </div>
+        <div className={className}>{links}</div>
         <div className="NavBar-social-links">
           <a className="NavBar-resume" href={ResumeDownloadLink} target="_blank" rel="noopener noreferrer">
             Resume

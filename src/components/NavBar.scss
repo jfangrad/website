@@ -21,6 +21,10 @@
   align-items: center;
 }
 
+.NavBar-link-container-collapsible {
+  display: none;
+}
+
 .NavBar-icon {
   padding: 4px 18px;
   background: none;
@@ -121,6 +125,13 @@
   }
 
   .NavBar-link-container {
+    .NavBar-link,
+    .NavBar-link--selected {
+      display: none;
+    }
+  }
+
+  .NavBar-link-container-collapsible {
     overflow: hidden;
     display: flex;
     flex-direction: column;
