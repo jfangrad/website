@@ -52,6 +52,9 @@ const NavBar = () => {
     <>
       <div className="NavBar">
         <div className="NavBar-link-container">
+          <button className="NavBar-control" onClick={onControlClick}>
+            <Menu />
+          </button>
           <button className="NavBar-icon" onClick={onLogoClick}>
             <img src={Logo} alt="Justin Fangrad Logo" />
           </button>
@@ -63,9 +66,6 @@ const NavBar = () => {
             Resume
           </a>
           {socialLinks}
-          <button className="NavBar-control" onClick={onControlClick}>
-            <Menu />
-          </button>
         </div>
       </div>
       {/* Placeholder for navbar at the top of the page (pushes everything else down by height of navbar) */}
