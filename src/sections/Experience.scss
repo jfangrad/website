@@ -33,6 +33,9 @@
   z-index: 1;
   flex: 1;
   margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &-right-align {
     text-align: right;
@@ -90,12 +93,17 @@
 }
 
 .ExperienceItem-divider {
+  display: none;
   margin: 2vw 10vw;
   border:1px solid $grey-light;
 
   &-right {
     border:1px solid $grey-dark;
   }
+}
+
+.ExperienceItem-divider-show {
+  display: block;
 }
 
 @media only screen and (max-width: 600px) {
@@ -119,11 +127,16 @@
   }
 
   .ExperienceItem-divider {
+    display: block;
     margin: 3vh 10vw;
     border:1px solid $grey-light;
 
     &-right {
       border:1px solid $grey-light;
+    }
+
+    &-last {
+      display: none;
     }
   }
 }
