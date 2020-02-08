@@ -1,8 +1,8 @@
 import React from 'react';
-import frontend from '../assets/frontend.svg';
-import programming from '../assets/programming.svg';
-import './Skills.scss';
 import ScrollMarker from '../components/ScrollMarker';
+import { SkillItems, SkillsDescription } from '../constants/Skills';
+
+import './Skills.scss';
 
 const SkillsItem = ({ icon, altText, title, description }) => (
   <div className="SkillsItem">
@@ -14,27 +14,6 @@ const SkillsItem = ({ icon, altText, title, description }) => (
   </div>
 );
 
-const SkillItems = [
-  {
-    icon: frontend,
-    altText: 'Frontend development icon',
-    title: 'Web development',
-    description: 'Extensive knowledge and experience with web development techologies including JavaScript, TypeScript, React, NodeJS, Express and others',
-  },
-  {
-    icon: frontend,
-    altText: 'Mobile development icon',
-    title: 'Mobile development',
-    description: 'Mobile development experience in Android using Java as well as Android and ios using React Native',
-  },
-  {
-    icon: programming,
-    altText: 'General development icon',
-    title: 'General programming',
-    description: 'Additional experience with C/C++, python, as well as database systems including MongoDB, MySQL, Neo4J, and Firebase',
-  },
-]
-
 const Skills = () => (
   <div className="Section Section-Secondary Skills">
     <ScrollMarker sectionId="skills" />
@@ -43,7 +22,7 @@ const Skills = () => (
         Skills
       </div>
       <div className="Skills-description">
-        Through my computer engineering degree, work experience, and own personal projects, I have gained experience in many areas of development. Some of these areas include web, mobile, and integrated development.
+        {SkillsDescription}
       </div>
       <div className="Skills-items-container">
         {SkillItems.map(item => <SkillsItem {...item} key={item.title} />)}
