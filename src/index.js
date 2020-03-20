@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AOS from 'aos';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'aos/dist/aos.css';
+
+AOS.init({ once: true });
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

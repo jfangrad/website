@@ -4,20 +4,31 @@ import { SkillItems, SkillsDescription } from '../constants/Skills';
 
 import './Skills.scss';
 
-const SkillsItem = ({ icon, altText, title, description }) => (
-  <div className="SkillsItem">
-    <div className="SkillsItem-icon">
-      <img src={icon} alt={altText} />
+const fadeTypeArray = ['fade-right', 'fade-up', 'fade-left'];
+
+const SkillsItem = ({ icon, altText, title, description, index }) => {
+  const fadeType = fadeTypeArray[index]
+  return (
+    <div className="SkillsItem" data-aos="fade-up">
+      <div className="SkillsItem-icon">
+        <img src={icon} alt={altText} />
+      </div>
+      <div data-aos={fadeType}>
+        <div className="SkillsItem-title">
+          {title}
+        </div>
+        <div className="SkillsItem-description">
+          {description}
+        </div>
+      </div>
     </div>
-    <div className="SkillsItem-title">{title}</div>
-    <div className="SkillsItem-description">{description}</div>
-  </div>
-);
+  );
+}
 
 const Skills = () => (
   <div className="Section Section-Secondary Skills">
     <ScrollMarker sectionId="skills" />
-    <div className="Skills-container">
+    <div className="Skills-container" data-aos="fade-up">
       <div className="Section-header">
         Skills
       </div>
@@ -25,7 +36,7 @@ const Skills = () => (
         {SkillsDescription}
       </div>
       <div className="Skills-items-container">
-        {SkillItems.map(item => <SkillsItem {...item} key={item.title} />)}
+        {SkillItems.map((item, index) => <SkillsItem {...item} key={item.title} index={index} />)}
       </div>
     </div>
   </div>
