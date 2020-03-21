@@ -5,13 +5,13 @@ import ScrollMarker from '../components/ScrollMarker';
 
 const ProjectItem = ({ img, title, link, tools, description, imgStyle, imgClass }) => {
   const descriptionMarkup = description.map(d => (
-    <div className="ProjectItem-description-item">{d}</div>
+    <div className="ProjectItem-description-item" key={d}>{d}</div>
   ));
 
   const imageMarkup = (type) =>  <div className={`ProjectItem-image-${type}`}><img src={img} className={imgClass} alt={title} /></div>;
 
   return (
-    <a className="ProjectItem" href={link} target="_blank" rel="noopener noreferrer">
+    <a className="ProjectItem" href={link} target="_blank" rel="noopener noreferrer" data-aos="fade-up">
       {imageMarkup('desktop')}
       <div className="ProjectItem-details">
         <div className="ProjectItem-header">
@@ -29,7 +29,7 @@ const ProjectItem = ({ img, title, link, tools, description, imgStyle, imgClass 
 
 const Projects = () => {
   const projectItems = ProjectItems.map(p => (
-    <ProjectItem {...p} />
+    <ProjectItem key={p.title} {...p} />
   ));
 
   return (

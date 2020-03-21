@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import classNames from 'classnames';
 import Intro from './components/Intro';
 import NavBar from './components/NavBar';
 import About from './sections/About';
@@ -9,14 +10,18 @@ import './App.scss';
 
 const App = () => {
   const [showingIntro, setShowingIntro] = useState(true);
+  const [shouldFade, setShouldFade] = useState(false);
 
   useEffect(() => {
     setTimeout(() => setShowingIntro(false), 5000);
+    setTimeout(() => setShouldFade(true), 4300);
   }, []);
 
+  const appClassName = classNames('App', { 'App-no-overflow': !shouldFade });
+
   return (
-    <div className="App">
-      {showingIntro && <Intro />}
+    <div className={appClassName}>
+      {showingIntro && <Intro fade={shouldFade} />}
       <NavBar />
       <About />
       <Skills />

@@ -16,9 +16,10 @@ const ExperienceItem = ({ companyName, companyLink, title, date, description, on
       'ExperienceItem-divider-last': isLast,
     },
   );
+  const aosData = onRight ? 'slide-left' : 'slide-right';
 
   return (
-    <div className={className}>
+    <div className={className} data-aos={aosData}>
       <div className="ExperienceItem-content">
         <div className="ExperienceItem-header">
           <a href={companyLink} className='ExperienceItem-company-name' target="_blank" rel="noopener noreferrer">
