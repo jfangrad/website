@@ -6,7 +6,10 @@ import About from './sections/About';
 import Skills from './sections/Skills';
 import Experience from './sections/Experience';
 import Projects from './sections/Projects';
+
 import './App.scss';
+
+const EnableIntro = true;
 
 const App = () => {
   const [showingIntro, setShowingIntro] = useState(true);
@@ -17,11 +20,11 @@ const App = () => {
     setTimeout(() => setShouldFade(true), 4300);
   }, []);
 
-  const appClassName = classNames('App', { 'App-no-overflow': !shouldFade });
+  const appClassName = classNames('App', { 'App-no-overflow': (!shouldFade && EnableIntro) });
 
   return (
     <div className={appClassName}>
-      {showingIntro && <Intro fade={shouldFade} />}
+      {showingIntro && <Intro fade={shouldFade} off={!EnableIntro} />}
       <NavBar />
       <About />
       <Skills />

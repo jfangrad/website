@@ -7,7 +7,7 @@ export const ProjectItems = [
   {
     img: Dropdown,
     title: 'React Dropdown Aria',
-    link: 'https://jfangrad.github.io/react-dropdown-aria/',
+    link: 'https://github.com/jfangrad/react-dropdown-aria',
     tools: 'TypeScript | React',
     description: [
       'Simple, lightweight, and accessible React dropdown component.',

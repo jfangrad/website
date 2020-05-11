@@ -63,7 +63,7 @@ const NavBar = () => {
         <div className={className}>{links}</div>
         <div className="NavBar-social-links">
           <a className="NavBar-resume" href={ResumeDownloadLink} target="_blank" rel="noopener noreferrer">
-            Résumé
+            Resume
           </a>
           {socialLinks}
         </div>
