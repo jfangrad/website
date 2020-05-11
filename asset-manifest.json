@@ -1,33 +1,35 @@
 {
   "files": {
-    "main.css": "/static/css/main.c44564dd.chunk.css",
-    "main.js": "/static/js/main.12f65188.chunk.js",
-    "main.js.map": "/static/js/main.12f65188.chunk.js.map",
+    "main.css": "/static/css/main.417b14a7.chunk.css",
+    "main.js": "/static/js/main.4da5d0b0.chunk.js",
+    "main.js.map": "/static/js/main.4da5d0b0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.783779e9.js",
     "runtime-main.js.map": "/static/js/runtime-main.783779e9.js.map",
     "static/css/2.06565635.chunk.css": "/static/css/2.06565635.chunk.css",
     "static/js/2.931003c6.chunk.js": "/static/js/2.931003c6.chunk.js",
     "static/js/2.931003c6.chunk.js.map": "/static/js/2.931003c6.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6ab0aedf94c505580db7a23b56ba3b7a.js": "/precache-manifest.6ab0aedf94c505580db7a23b56ba3b7a.js",
+    "precache-manifest.4bcdff19cecac07e8e9b08f577ef9842.js": "/precache-manifest.4bcdff19cecac07e8e9b08f577ef9842.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.06565635.chunk.css.map": "/static/css/2.06565635.chunk.css.map",
-    "static/css/main.c44564dd.chunk.css.map": "/static/css/main.c44564dd.chunk.css.map",
+    "static/css/main.417b14a7.chunk.css.map": "/static/css/main.417b14a7.chunk.css.map",
     "static/js/2.931003c6.chunk.js.LICENSE": "/static/js/2.931003c6.chunk.js.LICENSE",
     "static/media/JF_Logo.gif": "/static/media/JF_Logo.e08278b5.gif",
     "static/media/ShareBibles.png": "/static/media/ShareBibles.8dcf2c48.png",
+    "static/media/Skills.scss": "/static/media/background-light.7799081f.png",
     "static/media/blinds.jpg": "/static/media/blinds.f0eab530.jpg",
     "static/media/bringmeback.png": "/static/media/bringmeback.ba39a366.png",
-    "static/media/dropdown.svg": "/static/media/dropdown.72325580.svg",
+    "static/media/dropdown.svg": "/static/media/dropdown.7a670f56.svg",
     "static/media/frontend.svg": "/static/media/frontend.d78f60c7.svg",
     "static/media/justin-image.png": "/static/media/justin-image.a607fa85.png",
+    "static/media/About.scss": "/static/media/prism-light.115753b4.png",
     "static/media/programming.svg": "/static/media/programming.a19b0ba0.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.783779e9.js",
     "static/css/2.06565635.chunk.css",
     "static/js/2.931003c6.chunk.js",
-    "static/css/main.c44564dd.chunk.css",
-    "static/js/main.12f65188.chunk.js"
+    "static/css/main.417b14a7.chunk.css",
+    "static/js/main.4da5d0b0.chunk.js"
   ]
 }
